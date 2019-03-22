@@ -13,3 +13,8 @@ function hacerAlgoPromesa() {
             }, 2000)
     })
 }
+
+
+hacerAlgoPromesa()
+    .then((data) => { console.log("Resultado: ", data) })
+    .catch((error) => { console.log('Error: ', error) })
