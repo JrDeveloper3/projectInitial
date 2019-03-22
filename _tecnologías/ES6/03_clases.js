@@ -16,7 +16,6 @@ class LibroTec extends Libro {
     }
 }
 
-
 let libro = new Libro('Jorge', 'Los 100 moles')
 let libroTec = new LibroTec('Juan', 'Sorias', 'Social')
 
