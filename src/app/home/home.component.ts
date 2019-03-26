@@ -4,7 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'kc-home',
   template: `
     <div class="row">
-      <p>HOME</p>
+      <kc-saludo class="col"></kc-saludo>
+      <kc-local class="col "></kc-local>
     </div>
   `,
   styles: []
