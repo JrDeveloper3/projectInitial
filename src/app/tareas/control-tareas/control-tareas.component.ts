@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ControlTareasComponent implements OnInit {
 
   aTareas: Array<string>;
-
-
+  
   constructor() { }
 
   ngOnInit() {
