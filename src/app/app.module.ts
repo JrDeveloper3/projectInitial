@@ -9,13 +9,15 @@ import { HomeComponent } from './home/home.component';
 import { SaludoComponent } from './home/saludo/saludo.component';
 import { LocalComponent } from './home/local/local.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     HomeComponent, 
     SaludoComponent,
-    LocalComponent
+    LocalComponent,
+    
   ],
   imports: [
     BrowserModule,
