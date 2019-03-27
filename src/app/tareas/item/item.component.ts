@@ -17,7 +17,6 @@ export class ItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.item='';
   }
 
 
