@@ -8,8 +8,8 @@
             <input type="text" class="form-control" name="userName" id="userName" placeholder="Introduce el nombre..." #nombre>
         </div>
         <p class="card-text">Borraras el nombre inicial del saludo</p>
-        <button (click)="nombre.value = ''">Borrar</button>
-        <button (click)="nombre.value = nombre.value">Saludar</button>
+        <button class="btn btn-primary" (click)="nombre.value = ''">Borrar</button>
+        <button class="btn btn-success ml-2" (click)="nombre.value = nombre.value">Saludar</button>
     </div>
     <div class="card-footer text-muted">
         Hola {{nombre.value}}

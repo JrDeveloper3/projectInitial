@@ -20,7 +20,7 @@ export class ControlTareasComponent implements OnInit {
   }
 
   deleteTareas(){
-
+      this.aTareas.pop();
   }
 
 }
