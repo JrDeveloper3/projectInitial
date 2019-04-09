@@ -16,7 +16,11 @@ export class ControlTareasComponent implements OnInit {
   }
 
   addTareas(tarea){
+    if(tarea != ""){
     this.aTareas.push(tarea);
+    } else {
+      alert('Introduce una tarea correcta!!');
+    }
   }
 
   deleteTareas(i){

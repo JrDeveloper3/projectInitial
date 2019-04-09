@@ -22,7 +22,11 @@ export class ItemComponent implements OnInit {
 
   btnGuardar(){
     console.log(this.item);
+    if(this.item != ""){
       this.eventoAñadir.emit(this.item); //Enviamos el item con EventEmitter.
       this.item=''; //Dejamos el input en blanco
+    } else{
+      alert('Introduce una tarea correcta!!');
+    }
   }
 }

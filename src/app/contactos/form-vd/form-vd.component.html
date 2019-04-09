@@ -1,0 +1,116 @@
+<div class="container-fluid" style="width: 500px;">
+    <form #myForm='ngForm'>
+        <!--Text-->
+        <fieldset>
+            <legend>Datos del Usuario</legend>
+            <!-- Etiqueta / Campo "Nombre" -->
+            <div class="form-group row">
+                <label for="name" class="col-3 mr-2">Nombre:</label>
+                <input type="text" class="form-control col-7" name="name" id="name" required placeholder="Indica tu nombre (es obligatorio)" [(ngModel)]="contacto.name">
+            </div>
+            <!--Etiqueta / Campo "Apellidos"-->
+            <div class="form-group row">
+                <label for="lastname" class="col-3 mr-2">Apellidos:</label>
+                <input type="text" class="form-control col-7" id="lastname" name="lastname" required placeholder="Indica tu apellido (es obligatorio)" [(ngModel)]="contacto.lastname">
+            </div>
+            <!--Etiqueta / Campo "Correo"-->
+            <div class="form-group row">
+                <label for="email" class="col-3 mr-2">Correo:</label>
+                <input type="email" class="form-control col-7" id="email" name="email" required placeholder="Indica tu email (es obligatorio)" [(ngModel)]="contacto.email">
+            </div>
+            <!--Etiqueta / Campo "Telefono"-->
+            <div class="form-group row">
+                <label for="phoneNumber" class="col-3 mr-2">Teléfono:</label>
+                <input type="text" class="form-control col-7" id="phoneNumber" name="phoneNumber" required pattern="^[9|6]{1}([\d]{2}[-]*){3}[\d]{2}$" placeholder="9xx-xx-xx-xx (es obligatorio)" [(ngModel)]="contacto.phoneNumber">
+            </div>
+        </fieldset>
+        <!--Select/options -->
+        <fieldset class="form-group">
+            <!--Etiqueta / Campo "Grupo"-->
+            <legend>Grupo</legend>
+            <div class="form-group row">
+                <select class="form-control" id="grupo" name="grupo" [(ngModel)]="contacto.grupo" required>
+              <option *ngFor="let grupo of agrupos" [ngValue]="grupo">{{grupo.nombre}}</option>
+          </select>
+            </div>
+        </fieldset>
+        <div class="optional row">
+            <!--Radio-Buttos-->
+            <fieldset class="form-group col">
+                <!--Etiqueta / Campo "Sector laboral"-->
+                <legend>Sector laboral</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                  <input type="radio" class="form-check-input"
+                      name ="sector" id="tecnico"
+                      value="tecnico">
+                  Técnico
+              </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                  <input type="radio" class="form-check-input"
+                      name ="sector" id="creativo"
+                      value="creativo">
+                  Creativo
+              </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                  <input type="radio" class="form-check-input"
+                      name ="sector" id="comercial"
+                      value="comercial">
+                  Comercial
+              </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                  <input type="radio" class="form-check-input"
+                      name ="sector" id="otros"
+                      value="otros">
+                  Otros
+              </label>
+                </div>
+            </fieldset>
+            <!--Checkbox-->
+            <fieldset class="form-group col">
+                <legend>Aficiones</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+              <input type="checkbox"  class="form-check-input"
+                  id="lectura" name="lectura">
+                  Lectura
+              </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+              <input type="checkbox"  class="form-check-input"
+                  id="musica" name="musica">
+                  Música</label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+              <input type="checkbox"  class="form-check-input"
+                  id="deporte" name="deporte">
+                  Deporte</label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+              <input type="checkbox"  class="form-check-input"
+                  id="viajar" name="viajar">
+                  Viajar</label>
+                </div>
+            </fieldset>
+        </div>
+
+
+        <div class="form-group row">
+            <button type="submit" class="btn btn-primary mr-2">
+          Enviar</button>
+            <button type="button" class="btn btn-primary">
+          Borrar</button>
+        </div>
+    </form>
+
+    {{contacto | json}} <br> {{myForm.pristine}} <br> {{myForm.touched}} <br> {{myForm.valid}}
+</div>
