@@ -12,7 +12,7 @@ export class ItemComponent implements OnInit {
    @Output() //Variable de salida
    eventoAñadir: EventEmitter<string>;
 
-  constructor() { 
+  constructor() {
     this.eventoAñadir = new EventEmitter();
   }
 
@@ -21,6 +21,7 @@ export class ItemComponent implements OnInit {
 
 
   btnGuardar(){
+    console.log(this.item);
       this.eventoAñadir.emit(this.item); //Enviamos el item con EventEmitter.
       this.item=''; //Dejamos el input en blanco
   }

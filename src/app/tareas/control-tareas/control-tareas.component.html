@@ -2,5 +2,5 @@
     <kc-item (eventoAñadir)="addTareas($event)"></kc-item>
 </div>
 <div class="col">
-    <kc-lista [aItems]="aTareas"></kc-lista>
+    <kc-lista (eventBorrar)="deleteTareas($event)" [aItems]="aTareas"></kc-lista>
 </div>

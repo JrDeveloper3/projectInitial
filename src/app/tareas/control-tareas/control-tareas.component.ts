@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ControlTareasComponent implements OnInit {
 
   aTareas: Array<string>;
-  
+
   constructor() { }
 
   ngOnInit() {
@@ -19,8 +19,8 @@ export class ControlTareasComponent implements OnInit {
     this.aTareas.push(tarea);
   }
 
-  deleteTareas(){
-      this.aTareas.pop();
+  deleteTareas(i){
+      this.aTareas.splice(i,1);
   }
 
 }

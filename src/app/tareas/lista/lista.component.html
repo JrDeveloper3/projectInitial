@@ -3,9 +3,13 @@
         <h1>Listado de Tareas</h1>
     </div>
     <div class="card-body">
-        <ul *ngFor="let item of aItems">
-            <i class="fa fa-ils" aria-hidden="true">. {{item}}</i>
-        </ul>
+      <ul>
+        <li *ngFor="let item of aItems let i = index" class="mt-2">
+            <i class="fa fa-ils" aria-hidden="true"> {{item}}
+              <button (click)="btnBorrar(i)"
+              class="btn btn-danger ml-1 btn-sm">Borrar</button></i>
+            </li>
+      </ul>
     </div>
     <div class="card-footer text-muted">
     </div>
