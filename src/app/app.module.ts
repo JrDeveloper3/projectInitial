@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import { FormsModule } from '@angular/forms/';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -14,17 +14,17 @@ import { LocalComponent } from './home/local/local.component';
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent, 
+    HomeComponent,
     SaludoComponent,
     LocalComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     FormsModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

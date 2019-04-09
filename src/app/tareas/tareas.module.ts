@@ -5,13 +5,13 @@ import { TareasComponent } from './tareas.component';
 import { ControlTareasComponent } from './control-tareas/control-tareas.component';
 import { ItemComponent } from './item/item.component';
 import { ListaComponent } from './lista/lista.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms/';
 
 @NgModule({
   declarations: [TareasComponent, ControlTareasComponent, ItemComponent, ListaComponent],
   imports: [
     CommonModule,
-    TareasRoutingModule, 
+    TareasRoutingModule,
     FormsModule
   ]
 })
