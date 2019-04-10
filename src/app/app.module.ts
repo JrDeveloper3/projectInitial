@@ -10,6 +10,7 @@ import { SaludoComponent } from './home/saludo/saludo.component';
 import { LocalComponent } from './home/local/local.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

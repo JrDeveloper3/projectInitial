@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'kc-libros',
   template: `
-    <p>
-      libros works!
-    </p>
+    <div class="row">
+      <kc-mook-books></kc-mook-books>
+    </div>
   `,
   styles: []
 })
